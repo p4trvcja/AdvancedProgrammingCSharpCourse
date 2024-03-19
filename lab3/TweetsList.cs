@@ -104,7 +104,6 @@ namespace tweets {
         }
 
         public Dictionary<string, double> Idf() {
-            // slownik <slowo, ilosc tweetow w ktorych to slowo wystepuje>
             Dictionary<string, int> res = new Dictionary<string, int>();
 
             foreach(Tweet t in data) {
@@ -123,7 +122,7 @@ namespace tweets {
                     }
                 }
             }
-            // slownik <slowo, obliczone idf>
+
             Dictionary<string, double> result = new Dictionary<string, double>();
 
             foreach(KeyValuePair<string, int> kvp in res) {
