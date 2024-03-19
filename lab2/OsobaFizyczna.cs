@@ -20,7 +20,6 @@ public class OsobaFizyczna : PosiadaczRachunku {
     }
 
     public OsobaFizyczna(string imie_, string nazwisko_, string drugieImie_, string pesel_, string numerPaszportu_) {
-        
         if(pesel_ == null && numerPaszportu_ == null)
             throw new Exception("PESEL lub numerPaszportu nie moga byc null jednoczesnie");
 
