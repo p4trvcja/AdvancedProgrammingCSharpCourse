@@ -1,6 +1,5 @@
 namespace bank {
-public abstract class PosiadaczRachunku {
-    public abstract override String ToString();
-}
-
+    public abstract class PosiadaczRachunku {
+        public abstract override String ToString();
+    }
 }
