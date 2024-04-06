@@ -4,3 +4,4 @@
 ## [Laboratorium 02](https://github.com/p4trvcja/CSharp_projects/tree/main/lab2): Programowanie obiektowe w języku C# .NET Framework Core 7.0.
 ## [Laboratorium 03](https://github.com/p4trvcja/CSharp_projects/tree/main/lab3): Praca z kolekcjami
 ## [Laboratorium 04](https://github.com/p4trvcja/CSharp_projects/tree/main/lab4): LINQ
+## [Laboratorium 05](https://github.com/p4trvcja/CSharp_projects/tree/main/lab5): Programowanie współbieżne i synchronizacja (Thread)
