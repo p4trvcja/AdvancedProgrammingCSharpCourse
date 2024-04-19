@@ -1,0 +1,1 @@
+Celem laboratorium jest zapoznanie z działaniem podstawowych funkcji kryptograficznych w języku C#.
