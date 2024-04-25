@@ -111,53 +111,30 @@ namespace sqlite {
             }
         }
 
-        public static void insertData2(List<List<object>?> data, List<string> headers, string tableName, SqliteConnection connection)
-        {
-            // Insert data
-            SqliteCommand insertCmd = connection.CreateCommand();
-            foreach (List<object>? row in data)
-            {
-                string insert_command = "INSERT INTO " + tableName + " VALUES (";
-                foreach (object? value in row)
-                {
-                    if (value == null)
-                        insert_command += "NULL, ";
-                    else if (value.GetType() == typeof(string))
-                        insert_command += $"'{value}', ";
-                    else if(value.GetType() == typeof(double))
-                        insert_command += ((double)value).ToString("0.0", CultureInfo.InvariantCulture) + ", ";
-                    else
-                        insert_command += $"{value}, ";
-                }
-                insert_command = insert_command.TrimEnd(',', ' ') + ")";
-                System.Console.WriteLine(insert_command);
-                insertCmd.CommandText = insert_command;
-                insertCmd.ExecuteNonQuery();
-            }
-        }
         private static bool insertData(List<List<object>> data, List<string> header, string tableName, SqliteConnection connection) {
             try {
-                    SqliteCommand insertCmd = connection.CreateCommand();
+                SqliteCommand insertCmd = connection.CreateCommand();
 
-                    foreach(var row in data) {
-                        string insertCommand = "INSERT INTO " + tableName + " VALUES (";
-                        foreach(var val in row) {
-                            if(val == null)
-                                insertCommand += "NULL, ";
-                            else if(val.GetType() == typeof(string))
-                                insertCommand += $"\'{val}\', ";
-                            else if(val.GetType() == typeof(double))
-                                insertCommand += ((double)val).ToString("0.0", CultureInfo.InvariantCulture) + ", ";
-                            else
-                                insertCommand += $"{val}, ";
-                        }
-                        insertCommand = insertCommand.TrimEnd(',', ' ') + ")";
-
-                        System.Console.WriteLine(insertCommand);
-                        insertCmd.CommandText = insertCommand;
-                        insertCmd.ExecuteNonQuery();
+                foreach(var row in data) {
+                    string insertCommand = "INSERT INTO " + tableName + " VALUES (";
+                    foreach(var val in row) {
+                        if(val == null)
+                            insertCommand += "NULL, ";
+                        else if(val.GetType() == typeof(string))
+                            insertCommand += $"\'{val}\', ";
+                        else if(val.GetType() == typeof(double))
+                            insertCommand += ((double)val).ToString("0.0", CultureInfo.InvariantCulture) + ", ";
+                        else
+                            insertCommand += $"{val}, ";
                     }
+                    insertCommand = insertCommand.TrimEnd(',', ' ') + ")";
+
+                    System.Console.WriteLine(insertCommand);
+                    insertCmd.CommandText = insertCommand;
+                    insertCmd.ExecuteNonQuery();
+                }
                 return true;
+                
             } catch(Exception e) {
                 Console.WriteLine(e.Message);
                 return false;
