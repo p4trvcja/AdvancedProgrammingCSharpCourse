@@ -7,3 +7,6 @@
 ## [Laboratorium 05](https://github.com/p4trvcja/CSharp_projects/tree/main/lab5): Programowanie współbieżne i synchronizacja (Thread)
 ## [Laboratorium 06](https://github.com/p4trvcja/CSharp_projects/tree/main/lab6): Programowanie sieciowe w oparciu o gniazda TCP/IP
 ## [Laboratorium 07](https://github.com/p4trvcja/AdvancedProgrammingCSharpCourse/tree/main/lab7): Podstawowe funkcje kryptograficzne
+## [Laboratorium 08](https://github.com/p4trvcja/AdvancedProgrammingCSharpCourse/tree/main/lab8): SQLite
+## [Laboratorium 09](): Podstawy ASP.NET core MVC - kontrolery i widoki
+## [Laboratorium 10](): ASP.NET core MVC oraz REST API - projekt aplikacji internetowej 
